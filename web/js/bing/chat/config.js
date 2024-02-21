@@ -12,21 +12,26 @@ _w['_sydConvConfig'] = {
   // 禁止滑出
   enableScrollOut: false,
   enableSydContext: true,
-  sydOptionSets: 'spktxtibmoff,uquopt,enelecintl,gndeleccf,gndlogcf,jbfv203,2tlocretbn,osbsdrecoff',
-  sydBalOpts: 'cgptrsndlwcp,flxclmdlspwcp,gldcl1wcp,glfluxv15wcp,invocmax',
-  sydCrtOpts: 'invocmax',
-  sydPrcOpts: 'invocmax',
+  sydOptionSets: 'uquopt,langdtwb,enflst,enpcktrk,rcaldictans,rcaltimeans,gndbfptlw',
+  sydBalOpts: 'gldcl1p',
+  voiceSrOptions: 'cdxsrcct',
   sydBalExtraOpts: 'saharagenconv5',
   sydCrtExtraOpts: 'clgalileo,gencontentv3',
   sydPrcExtraOpts: 'clgalileo,gencontentv3',
-  sydIDs: 'gbacf,bggrey,1366cf,multlingcf,stibmoff,tts4,ttsvivn,caccnctacf,specedge,inosanewsmob,wrapnoins,racf,rwt2,dismmaslp,1117gndelecs0,713logprobss0,1111jbfv203,1118wcpdcl,117invocmax,10312tlocret,1025gptv_v2s0,fluxnosearch,1115fluxvs0,727nrprdrt6,727nrprdrt5,codecreator1,cacmuidarb,edgenorrwrap,tstchtadd',
+  sydIDs: 'newzi,fluxsunoall,ntbkf1,abv2cl,bcentbk,mobntbk,ntbk,rankcf,inlineadsv2cf,fput1,fluxnosuno,mobfdbkcf,v6voice,291encacheas0,cmcallapptf,tts5cf,abv1logf,designer2cf,suppalwaystest-c,translrefctrl,kchero50cf,msgchkcf,0212bops0,116langwb,124multi2ts0,119wcphis0,0131dv1,0131onthdas0,0131gndbfpr,cacfastapis',
   sydBaseUrl: location.origin,
   compSydRequestSource: 'cib',
+  compSydClientScenario: 'chat',
+  compSydClientPlatform: 'Web',
+  enablePassingCompliantSydneyClientInfo: true,
   compSydRequestScenario: 'chat',
+  enablePluginsForBizChat: true,
   augloopEndpoint: 'https://augloop.office.com',
   enableProdEditorEndpoint: true,
   ciqReleaseAudienceGroup: 'Production',
   enableDeterminateProgressBar: true,
+  enablePLSingleColumnStylesV2: true,
+  enableCheckMsbCibBundleLoad: true,
   enableSapphireSydVoiceExp: true,
   sapphireArticleContentAPI: 'https://assets.msn.com/content/view/v2/Detail',
   sapphireSydneyQualificationAPI: '/edgesvc/postaj/sydneyqualification',
@@ -43,7 +48,7 @@ _w['_sydConvConfig'] = {
   lat: '78.4156',
   long: '-101.4458',
   language: 'Chinese (China)',
-  userMailId: randomString(Math.round(Math.random()*16))+'@'+randomLowercaseString(randomString(Math.round(Math.random()*12)))+'.com',
+  userMailId: randomString(Math.round(Math.random()*16))+'@'+randomLowercaseString(Math.round(Math.random()*12))+'.com',
   username: randomString(Math.round(Math.random()*16)),
   userIpAddress: CookieGet('BingAI_Rand_IP'),
   isMSAAuthenticated: true,
@@ -51,10 +56,11 @@ _w['_sydConvConfig'] = {
   enableSydX1T: true,
   enableSydTestCache: false,
   enableSydCarousel: true,
-  traceId: randomLowercaseString(32),
+  traceId: crypto.randomUUID().replace(/-/g, ''),
   extraEdgeOptions: 'eredirecturl',
   enableSydMic: true,
   enableSydShare: true,
+  enableMessageShareableSignalV2: true,
   enableSydCookLoc: true,
   enableSQMsg: true,
   addDv3Opt: true,
@@ -62,14 +68,14 @@ _w['_sydConvConfig'] = {
   checkCreatorAnsFor1T: true,
   enableAnsCardSuffix: true,
   isAdultUser: true,
+  enableSpeechContinuousErrorHandling: true,
+  enableTTSNeverSetting: true,
+  enableCustomizedTtsOptions: true,
   enableSydCLOC: true,
   enableCdxFeats: true,
   enableShareModalDialog: true,
   enableFdbkFinalized: true,
-  enableDM: true,
   enableSydImageCreate: true,
-  enableToneCook: true,
-toneDefault: 'Creative',
   balTone: 'galileo',
   crtTone: 'h3imaginative',
   prcTone: 'h3precise',
@@ -81,18 +87,21 @@ toneDefault: 'Creative',
   enableSpeechTTSLatencyLogging: true,
   enableSpeechIconDarkTheme: true,
   enableSpeechAriaLabel: true,
-  enableBalDefault: true,
   enableNewTopicAutoExpand: true,
   enableThreadsAADMSASwitch: true,
   enableMaxTurnsPerConversation: true,
-// 设置已登录账号的聊天对话次数
+  // 设置已登录账号的聊天对话次数
   maxTurnsPerConversation: 30,
-// 设置未登录账号的聊天对话次数
+  // 设置未登录账号的聊天对话次数
   maxTurnsPerConversationMuidUser: 10,
   maxMessageLength: 4000,
+  maxMessageLengthBalanced: 2000,
+  maxMessageLengthCreative: 4000,
+  maxMessageLengthPrecise: 4000,
   enablePerfTrk: true,
   enableTonePerf: true,
   enableSinglePerfEventPerMessage: true,
+  enableE2EPerf: true,
   enableAdSlugsMobile: true,
   enableUnauthRedir: true,
   enableVersionedApiCalls: true,
@@ -117,6 +126,7 @@ toneDefault: 'Creative',
   enableAutoRecoverFromInvalidSessionForFirstTurn: true,
   enableCodeCopy: true,
   enableCodeBar: true,
+  enableCodeBarV2: true,
   enableInlineFeedback: true,
   enableInlineFeedbackV21: true,
   enableSerpFeedback: true,
@@ -124,9 +134,9 @@ toneDefault: 'Creative',
   enableActionBarIMEFix: true,
   enableGhostTrailingSpaceByLanguage: true,
   shareLoadingUI: true,
+  customizedShareOutImageThumbnailId: 'OBFB.' + crypto.randomUUID().replace(/-/g, '').toUpperCase(),
   enableFeedbackInstrumentation: true,
   sydSapphireUpsellVisualSearchQRCodeUrl: 'https://bingapp.microsoft.com/bing?adjust=13uz7blz_13evwnmy',
-  enableSydneySapphireUpsellMessageActions: true,
   sydneyContinueOnPhoneShortenQRCodeUrl: 'https://bingapp.microsoft.com/bing?style=newbing\u0026adjust=euhmno2_oy62nz1',
   enableConvModeSwitchAjax: true,
   enableSetToneFromUrl: true,
@@ -137,7 +147,9 @@ toneDefault: 'Creative',
   codexPartnerScenario: 'SERP',
   enableMessageExport: true,
   enableFlatActionBar: true,
+  enableAutosuggestMetrics: true,
   enablePrivacyConsent: true,
+  enableCodexMuidConsentExplicit: true,
   enableFixCodeXAsBug: true,
   enableThreads: true,
   enableSkipContentOriginCheck: true,
@@ -155,8 +167,12 @@ toneDefault: 'Creative',
   disable2TSearchHistory: true,
   enableSydBeacon: true,
   enableVisualSearch: true,
+  enableNativeCameraInput: true,
+  eifpiab: true,
+  evscamprd: true,
+  vscamprdname: 'FileUploadCameraProvider',
+  efhof: true,
   visualSearchSubscriptionId: 'Bing.Chat.Multimodal',
-  suppressPoleRSWhenEnableSydCarousel: true,
   disablePassBotGreetingInContext: true,
   enableThreadContextMenu: true,
   enableCloudflareCaptcha: true,
@@ -164,13 +180,15 @@ toneDefault: 'Creative',
   enableStartPromotion: true,
   enableKnowledgeCardImage: true,
   enableMobileKnowledgeCardOverlay: true,
-  suppressPoleRecommendedSearchWhenEnableSydCarousel: true,
+  enableCibOverlayForKnowledgeCard: true,
   enableCopyButtonInstrumented: true,
   enableMessageExportWithPlainText: true,
   enableMessageExportOnlineWord: true,
   enableMessageExportOnlineExcel: true,
+  enableTableBarFlatActions: true,
   enableThreadExportOnlineWord: true,
   enableMessageExportV2: true,
+  enableBotMessageActionsBar: true,
   enableDirectlyOpenExportOnlineLink: true,
   enableLoginHintForSSO: true,
   enableLimitToMsaOnlineExport: true,
@@ -180,10 +198,14 @@ toneDefault: 'Creative',
   enableGetChats: true,
   enableDelayGetChats: true,
   enableExportDocxWithFormat: true,
+  enableExportDocxWithTableFormat: true,
   enableThreadSync: true,
   enableFlux3P: true,
+  f3pMsaAccountOnly: true,
+  enableSearchPluginOnTop: true,
   disableWelcomeScreen: true,
-  enableWelcomeScreenV2: true,
+  enableWelcomeScreenV2: false,
+  enableWelcomeScreenV3: true,
   codexTableVersion: true,
   enableBICHistory: true,
   enableRenderCardRequestIMSearchParams: true,
@@ -191,12 +213,21 @@ toneDefault: 'Creative',
   enableOnProcessingStartEvent: true,
   enableOnProcessingCompleteEvent: true,
   enableTypewriter: true,
+  enableCitationsOnSentences: true,
   fileUploadMaxSizeLongContext: 10000000,
+  fileUploadMaxAudioSize: 15000000,
+  fileUploadFileNameLengthLimitation: 100,
+  fileMaxCountForGptCreator: 5,
+  fileMaxCountForChat: true,
   enableUserMessageCopy: true,
+  enableCopilotFullScreenUX: true,
   enableDeferredImageCreatorCard: true,
   enableFaviconsV2: true,
+  enableFaviconChatCopilotIcon: true,
   enableUserIpAddress: true,
+  enableNewChatIconInActionBar: true,
   enableActionBarV2: true,
+  enableAccentedIconsOnMobileABV2: true,
   speechSurface: 'desktop',
   enableKatexScroll: true,
   padding2TMobile: 80,
@@ -205,57 +236,132 @@ toneDefault: 'Creative',
   enableUpdateUserMessageId: true,
   enablePluginPanelFre: true,
   enableMobileFirstClickShare: true,
-  personalizationInlineConsentTurn: false,
+  enableInlinePersonalizationConsent: true,
+  enableSydWelcomeScreenMobileEvents: true,
+  enableFetchUserConsent: true,
+  personalizationInlineConsentTurn: true,
+  enableReadAloudMessage: true,
+  enableReadAloudOnDeepLeoOnly: true,
   enableNoBingSearchResponseBackground: true,
   enableNoSearchPluginMetaMessage: true,
-  enableInlineAdsDynamicWidth: true,
   enableShareInThreadsHeader: true,
+  enableThreadsConsent: true,
   enableDeleteSingleConversationMemory: true,
   enableStableAutosuggestion: true,
   threadsAutoSaveOptionset: 'autosave',
-  enableUserMessageRewriteAndCopy: true,
+  enableThreadContextMenuV2: true,
   enableBCBSensitivityLabel: true,
   enableOneDs: true,
   enablePromptHandling: true,
   dedicatedIpType: 'unknown',
-  enableCIQEmail: true,
-  enableCIQAutoScoping: true,
+  enableCiqAttachmentsOnInputChanges: true,
   enableCachedContentFixForIsStartOfSession: true,
+  enableNotebookMode: true,
+  enableRecoverConvNotebook: true,
+  enableShiftEnterNotebook: true,
   extraNotebookOptionsSets: 'iycapbing,iyxapbing,prjupy',
   notebookMaxMessageLength: 18000,
+  enableSetNotebookAlignment: true,
   initialShowConvPresent: true,
+  enableCancelPendingRequestOnNewMessage: true,
   enableAttributionsV2: true,
   minimumZeroInputSuggestionCount: true,
-  imageSearchFormCode: 'IACMIR',
-  imageSearchEnableMediaCanvas: true,
-  imageSearchMaxImageCount: 5,
-  imageSearchForceSquareImages: true,
+  enableCopilotLayout: true,
+  enableSpeechLogNoiseReduction: true,
+  enableAltVoiceQuerySubmissionOnMobileABV2: true,
+  multimediaSearchFormCode: 'IACMIR',
+  multimediaSearchEnableMediaCanvas: true,
+  multimediaSearchMaxImageCount: 3,
+  defaultFallBackSERPQuery: 'Bing AI',
   enableRelativeSignInUrl: true,
-  chatBackgroundColorOverride: 'f7f7f8',
+  enableChatScrollFix: true,
+  enableCvidInAutosuggestAPI: true,
+  enableSwiftKeyLatestUX1: true,
+  enableBufferClearOnReset: true,
+  enablePluginChatModeOnly: true,
+  enableGhostingSuggestTelemetry: true,
+  bceTermsOfUseVersion: 2,
+  disableTitlePreviewLabel: true,
+  // GPTs
+  enableFreeSydney: false,
+  // Microsoft Designer
+  enableDesignerGPT: false,
+  defaultMaxPersonaCount: 6,
+  enableFreeSydneyPrivacy: true,
+  isBingUserSignedIn: true,
+  freeSydneyCopilotIconUrl: '/rp/_WT61VllAyx4fyquJgufM7hwmeg.png',
+  freeSydneySydneyIconUrl: '/rp/ZIFQVh6WX4QKgPWuBMBKNrERh3A.png',
+  freeSydneyDesignerIconUrl: '/rp/l8iFubC9EgDGvKo7xeNIvSQwikU.png',
+  enableF3pNoSearchBgFix: true,
+  enableSunoMusicCreate: true,
+  sydneyFeedbackVertical: 'chat',
+  enableSunoUpsell: true,
+  enableFaqBcc: true,
+  enableFaqBce: true,
+  faqBccBceUrl: '/new',
+  gptCreatorCopilotCreatorPath: '/turing/copilot/creator',
+  gptCreatorBingPreviewPath: '/search',
+  gptCreatorSharePath: '/search',
+  // V3 UI
+  enableGoldilocks: true,
+  enableGoldilocksRAIButton: true,
+  enableGoldilocksStrokes: true,
+  enableGoldiLocksBackgroundLight: true,
+  enableGoldilocksLineHeight: true,
+  enableGoldilocksMetaMessage: true,
+  enableGoldilocksAttributionPills: true,
+  enableGoldilocksMessageActions: true,
+  enableGoldilocksTurnCounter: true,
+  enableGoldilocksStrokes2T: true,
+  enableGoldilocksWiderActionBar: true,
+  enableGoldilocksExportDropdown: true,
+  enableGoldilocksInlineFeedback: true,
+  enableGoldilocksUserMsgActionBar: true,
+  enableGoldilocksContextual: true,
+  enableGoldilocksSydneyAction: true,
+  enableTopAlignConversation: true,
+  enableMessageGroupHeader: true,
+  enableFullWidthMessages: true,
+  enableInlineStreamingIndicator: true,
+  enableStreamingInBackground: true,
+  enableCitationSuperscriptFix: true,
+  enableGptCreatorConfigurePanelKnowledges: true,
+  enableGptCreatorConfigurePanelcapabilities: true,
+  enableGptCreatorConfigurePanelImageGenerator: true,
+  enableAttributionsV2MoreButton: true,
+  enableGoldilocksCitations: true,
+  userAnID: crypto.randomUUID().replace(/-/g, '').toUpperCase(),
+  enableShowAutosuggestButton: true,
+  freeSydneyOptionSets: [{
+    value: 'fluxsydney'
+  }],
+  neuripsOptionSets: [{
+    value: 'nipsgpt'
+  }],
   codexOptionsSetsList: [{
     value: 'iyxapbing'
   },
   {
     value: 'iycapbing'
   }],
-  autoHideConvInterval: 3600000,
+  autoHideConvInterval: 600000,
   enableAjaxBundlePLoad: true,
-  PLoadIID: 'SERP.5883'
+  PLoadIID: 'SERP.5911'
 };
 _w['_sydThreads'] = {
   threads: [],
 };
 _w['_sydConvTranslation'] = {
-    actionBarPlaceholder: '有问题尽管问我...（Shift + Enter = 换行，"/" 触发提示词）',
+  actionBarPlaceholder: '有问题尽管问我...（Shift + Enter = 换行，"/" 触发提示词）',
   actionBarComposeButton: '新主题',
   actionBarNewChatButtonDesktop: '开始新聊天',
   actionBarNewChatButtonMobile: '新建聊天',
   actionBarOngoingConvPlaceholder: '键入消息',
   attachmentLoading: '正在加载附件',
-  notiUpdateBrowser: '很抱歉，我们遇到了一些问题。请尝试刷新页面并确保你的浏览器是最新的',
-  bufferMessage1: '我正在使用它，请稍候',
-  bufferMessage2: '请稍等',
-  bufferMessage3: '花点时间思考...',
+  notiUpdateBrowser: '很抱歉，我们遇到了一些问题。',
+  bufferMessage1: '收到了，稍等一下...',
+  bufferMessage2: '听到你的声音，请稍等片刻...',
+  bufferMessage3: '好的，让我快速处理...',
   deleteAttachment: '删除附件',
   captchaTitle: '验证身份',
   captchaDescription: '若要继续，请在下图中输入字符。',
@@ -295,6 +401,9 @@ _w['_sydConvTranslation'] = {
   welcomeMessageItemTitle2: '🙌获取更好的答案',
   welcomeMessageItemTitle3: '🎨 获得创意灵感',
   welcomeMessageItemLabel4: '更多创意中的新增功能：',
+  welcomeMobCopilotSugg1: '与家人一起创作一首关于冒险的歌曲',
+  welcomeMobCopilotSugg2: '用不押韵的生动图像写一首诗',
+  welcomeMobCopilotSugg3: '向我提供一个列表，列出我可在有限的空闲时间追求的新爱好',
   warmWelcomeTitle: '欢迎使用新必应',
   warmWelcomeTitleLine2: '',
   warmWelcomeAriaLabel: '欢迎使用新必应',
@@ -313,6 +422,8 @@ _w['_sydConvTranslation'] = {
   feedbackFormNotificationBodyText: '感谢你帮助必应改进！',
   feedbackFormThanksMessage: '感谢你提供的反馈!',
   feedbackFormReturnToChatMessage: '返回到聊天',
+  inlineFeedbackShownAriaLabelPrefix: '显示的消息反馈条目',
+  inlineFeedbackSearchOnBingText: 'Try search on Bing:',
   serpFeedbackFormTitleText: '请帮助我们改进体验',
   serpFeedbackFormInputDefaultText: '在此处输入反馈。为了帮助保护你的隐私，请不要填入你的姓名或电子邮件地址等个人信息。',
   serpFeedbackFormScreenshot: '包括此屏幕截图',
@@ -333,19 +444,23 @@ _w['_sydConvTranslation'] = {
   compliantNegativeFeedbackFormTitleText: '向 Microsoft 发送详细反馈',
   compliantNegativeFeedbackCategoryText: '该内容是',
   compliantNegativeFeedbackQuestionText: '出了什么问题?',
-  compliantFeedbackThanksText: '感谢你提交关于 {0} 的反馈!',
+  compliantFeedbackThanksText: '感谢你提供的反馈!',
   compliantFeedbackCategoryInaccurate: '不准确',
   compliantFeedbackCategoryOffensive: '冒犯性或不适宜',
   compliantFeedbackCategoryOther: '其他',
-  pageTitleText: '配备 GPT-4 的必应聊天',
+  pageTitleText: '具有 GPT-4 的 Copilot',
   submit: '提交',
   explore: '浏览',
   exploreMore: '浏览更多',
   metaInternalSearchQuery: '正在搜索: `{0}`',
   metaInternalLoaderMessage: '正在为你生成答案...',
-  metaInternalImageLoaderMessage: '分析图像: 隐私模糊会隐藏必应聊天中的人脸',
-  metaInternalFileAnalyzeLoaderMessage: 'Analyzing the file {0}',
-  metaInternalFileReadLoaderMessage: 'Reading the file {0}',
+  metaInternalImageLoaderMessage: '分析图像: 隐私模糊会隐藏 Copilot 的人脸',
+  metaInternalFileAnalyzeLoaderMessage: '正在分析文件:“{0}”',
+  metaInternalFileReadLoaderMessage: '正在读取文件:“{0}”',
+  metaInternalGptCreatorUpdateNameMessage: '正在更新 Copilot GPT 名称',
+  metaInternalGptCreatorUpdateProfileMessage: '正在更新 Copilot GPT 配置文件',
+  metaInternalGptCreatorNameUpdatedMessage: '已更新 Copilot GPT 名称',
+  metaInternalGptCreatorProfileUpdatedMessage: '已更新 Copilot GPT 配置文件',
   compliantMetaInternalLoaderMessage: '从 {0} 生成安全答案',
   messageSharedContent: '共享内容',
   more: '更多',
@@ -355,16 +470,21 @@ _w['_sydConvTranslation'] = {
   actionBarTextInputAriaLabel: '询问必应',
   seeMore: '查看更多',
   seeLess: '查看更少',
+  seeChatHistory: '查看聊天历史记录',
+  hideChatHistory: '隐藏聊天历史记录',
+  seeMoreGPTs: '查看更多 Copilot GPT',
+  seeLessGPTs: '查看更少 Copilot GPT',
   raiSuggestions: '显示了解更多建议',
   raiSuggestionsClose: '隐藏了解更多建议',
-  actionBarFileUploadButtonAriaLabel: '上传高达 500 KB 的文本文件或尝试 Web URL',
+  actionBarFileUploadButtonAriaLabel: '上传文件',
   actionBarFileUploadLongContextButtonAriaLabel: '上传文本文件或尝试 Web URL',
-  actionBarFileUploadButtonTooltip: '上传文本文件(最多 500 KB)或尝试 Web URL',
+  actionBarFileUploadButtonTooltip: '添加文本文件或尝试 Web URL',
   actionBarFileUploadLongContextButtonTooltip: '上传文本文件或尝试 Web URL',
   actionBarTextInputModeButtonAriaLabel: '使用键盘',
   actionBarTextInputUnsupportedFileMessage: '不支持此文件类型。选择文本文件或图像文件，然后重试。',
   actionBarAddNotebookButtonTooltip: '新主题',
   actionBarAddNotebookButtonAriaLabel: '新主题',
+  actionBarEditResponseTitle: '编辑并发送',
   actionBarSpeechInputModeButtonAriaLabel: '使用麦克风',
   actionBarVisualSearchButtonTooltip: '添加图像',
   actionBarVisualSearchButtonAriaLabel: '添加要搜索的图像',
@@ -378,13 +498,18 @@ _w['_sydConvTranslation'] = {
   actionBarSpeechBtnStartListeningAriaLabel: '使用麦克风',
   actionBarSpeechBtnStopListeningAriaLabel: '停止侦听',
   actionBarSpeechBtnStopReadoutAriaLabel: '停止读出',
+  camera: 'Camera',
+  attachment: '附件',
   attachmentHasSucceded: '已成功添加附件',
   attachmentHasFailed: '附件失败',
+  attachmentIsReplaced: '以前的附件已替换为新附件',
+  editResponseQueryPrefix: '这是我编辑的版本，请查看 - \\n{0}',
   feedbackLikeButtonAriaLabel: '点赞',
   feedbackDislikeButtonAriaLabel: '不喜欢',
   feedbackOffensiveButtonAriaLabel: '标记为冒犯性',
   feedbackCopyButtonAriaLabel: '复制',
   feedbackRewriteButtonAriaLabel: '重写',
+  feedbackSearchOnBingButtonAriaLabel: '在必应上搜索',
   feedbackShareButtonAriaLabel: '共享',
   messageReceivedAriaLabelPrefix: '已收到消息',
   messageReportedOffensiveAndRemoved: '已删除此消息，因为它已被举报待审查。',
@@ -426,26 +551,26 @@ _w['_sydConvTranslation'] = {
   newTopicSugg23: '火烈鸟为何为粉色?',
   newTopicSugg24: '全息影像的工作原理是什么?',
   newTopicSugg25: '金字塔是如何建成的?',
-  newUserGreet: '很高兴认识你！我是必应，我不仅仅是一个搜索引擎。我可以帮助你规划群、写一个朋友或询问宇宙。你想要探索什么？',
-  newUserSugg1: '写一首诗',
-  newUserSugg2: '玩小游戏',
-  newUserSugg3: '给我说个笑话',
-  repeatUserGreet: '又见面了。我很乐意为你提供任何帮助。如何为你效劳，改进你的一天?',
-  repeatUserSugg1: '生成故事',
-  repeatUserSugg2: '告诉我一个事实',
-  repeatUserSugg3: '你可以做什么?',
-  creativeGreet: '好吧!这就是创造力。我能帮什么忙？',
+  newUserGreet: '欢迎，这是必应！我们即将开始全新的搜索方式。告诉我你为什么在这里，我可以找到答案、激发新创意或与你聊天。那么，我可以为你做什么？',
+  newUserSugg1: '搜索网页',
+  newUserSugg2: '搜索资讯',
+  newUserSugg3: '玩小游戏',
+  repeatUserGreet: '你好！很高兴’我们可以继续聊天。你今天想要探索什么？',
+  repeatUserSugg1: '谁创建了你?',
+  repeatUserSugg2: '给我说个笑话',
+  repeatUserSugg3: '做个小测验',
+  creativeGreet: '让我们发挥创意吧！你是否在考虑某个主题，还是即兴发挥？',
   balancedGreet: '好的，我们来查找答案并聊会天。我可以为你做什么？',
-  preciseGreet: '感谢聊天。今天我能帮你吗？',
-  creativeSugg1: '告诉我的星座',
+  preciseGreet: '你好，我来帮你查资料。首先请问我一个问题。',
+  creativeSugg1: '给雷雨写一封情书',
   creativeSugg2: '让我们写一首节拍诗',
-  creativeSugg3: '给我一个你想问的问题',
-  balancedSugg1: '给我个周末度假的主意',
-  balancedSugg2: '附近哪里可以看到星星？',
+  creativeSugg3: '告诉我我的星座运势',
+  balancedSugg1: '去露营我需要什么？',
+  balancedSugg2: '给我个周末度假的主意',
   balancedSugg3: '哪种花最香？',
-  preciseSugg1: '我需要帮助做研究',
+  preciseSugg1: '谁第一个发现南极洲？',
   preciseSugg2: '给我列出今晚晚餐的购物清单',
-  preciseSugg3: '谁发明语言？',
+  preciseSugg3: '为我编辑内容',
   close: '关闭',
   newTopicPrompt: '通过新聊天，可以开始与必应就任何主题进行全新对话',
   typingIndicatorStopRespondingAriaLabel: '停止响应',
@@ -456,7 +581,10 @@ _w['_sydConvTranslation'] = {
   welcomeLearnFeedbackSubstitute: '共享反馈',
   adsDisclaimer: '广告不是基于工作区标识或聊天历史记录的目标。{0}。',
   adsDisclaimerLearnMoreLink: '了解更多',
+  welcomeTileContainerTitle: '一些帮助你入门的想法',
+  welcomeLearnMessageOnMobileCopilot: 'Copilot 由 AI 提供支持，因此可能会出现意外和错误。请 {0}，以便我们可以改进。',
   actionBarNewlineTooltip: '使用 Shift+Enter 为较长的消息创建换行符',
+  actionBarQuickCaptureButtonAriaLabel: '快速捕获',
   notiChatEnd: '聊天主题已结束。',
   notiRestartChat: '在 {0} 小时内开始新主题',
   notificationAttemptingToReconnect: '正在尝试重新连接...',
@@ -465,6 +593,74 @@ _w['_sydConvTranslation'] = {
   notificationLostConnectionCta: '是否要尝试重新连接？',
   sydneySapphireConsentDenyText: '拒绝',
   typingIndicatorStopStreamingAriaLabel: '停止流式传输',
+  configurePanelFileUploadButton: '文件已上传',
+  configurePanelNamePlaceHolder: '为 Copilot GPT 命名',
+  configurePanelDescriptionPlaceHolder: '简要描述此 Copilot GPT 的作用',
+  configurePanelInstructionsPlaceHolder: '指示 Copilot GPT 如何行事。它应遵循哪些规则?它的作用是什么?它是否以某种风格响应?',
+  configurePanelName: '名称',
+  configurePanelNameAriaLabel: '设置 Copilot GPT 的名称',
+  configurePanelDescription: '说明',
+  configurePanelDescriptionAriaLabel: '设置 Copilot GPT 的说明',
+  configurePanelInstructions: '指令',
+  configurePanelInstructionsAriaLabel: '设置 Copilot GPT 的说明',
+  configurePanelCapabilities: '功能',
+  configurePanelWebSearch: 'Web 浏览',
+  configurePanelIsWebSearchEnabledAriaLabel: '启用或禁用 Web 搜索功能',
+  configurePanelImageGenerator: 'DALL-E 映像生成',
+  configurePanelIsImageGeneratorEnableAriaLabel: '启用或禁用映像生成器功能',
+  configurePanelCodeInterpreter: '代码解释器',
+  configurePanelIsCodeInterpreterEnableAriaLabel: '启用或禁用代码解释器功能',
+  configurePanelKnowledge: '知识',
+  configurePanelSaveButton: '保存更改',
+  configurePanelSaveSuccess: '保存成功',
+  configurePanelSaveFailure: '保存失败',
+  configurePanelSaveLoading: '正在保存，请稍候...',
+  configurePanelAffirmationTips: '点击“发布”即表示我了解，如果选择共享 Copilot GPT，则与 Microsoft 帐户关联的名称以及上传或输入到 GPT 的任何敏感或个人数据可能公开可用或与 GPT 的收件人共享。并且我确认我拥有创建此 GPT 所需的所有权利、权限和授权，并且此 GPT、GPT 说明和任何随附文件均遵守 Microsoft Copilot 行为准则和条款，不会侵犯或鼓励侵犯任何第三方权利(包括版权、商标或公开权限)。',
+  configurePanelUploadTips: '通过上传文件，我证明我有权创建 Copilot GPT，且不侵犯任何第三方知识产权。',
+  configurePanelEmptyWarningTips: '{0} 不得为空!',
+  gptCreatorDeleteConfirm: '删除',
+  gptCreatorDeleteQuestion: '是否确定要删除?',
+  gptCreatorDeleting: '正在删除。请稍等...',
+  gptCreatorDeleteFailed: '无法删除。请重试',
+  gptCreatorDeleteSucceeded: '删除成功',
+  gptCreatorDeleteCanceled: '删除已取消',
+  gptCreatorDeleteCancel: '取消',
+  gptCreatorLoadEditedGptFailure: '加载 Copilot GPT 失败',
+  gptCreatorPrivacyTermsStatement: '你好!在这里，可以通过聊天创建 Copilot GPT。只需下达指令、提问，并在出现问题时更正我。继续与我交互即表示你接受 {0} 并确认你已查看 {1}。 ',
+  gptCreatorTipsTitle: '用于创建高质量 Copilot GPT 的提示:',
+  gptCreatorTipsEnd: '让我们开始创建!',
+  gptCreatorTip1: '请尝试使用简短易记的名称来描述其功能。',
+  gptCreatorTip2: '使用清晰明了的语言。避免使用生僻的首字母缩写词、技术术语或过于复杂的词汇。',
+  gptCreatorTip3: '请提供具体可行的提示，以便 Copilot GPT 准确了解你希望它执行的操作。可以提供示例、上下文或限制条件来进行引导。',
+  gptCreatorTip4: '使用与用户和当前任务相关的问题或语句。还可以使用 Copilot GPT 可能识别和与所需响应相关联的关键字或短语。',
+  gptCreatorTip5: '确保你对用于创建 Copilot GPT 的任何内容、上传或说明具有必要的权限。',
+  gptCreatorHeader: 'Copilot GPT 设置',
+  gptCreatorConfigurePanel: '配置',
+  gptCreatorCreatePanel: '创建​​',
+  gptCreatorPublishButton: '发布',
+  gptCreatorCopyButtonLabel: '复制',
+  gptCreatorPublishDropdownTitle: '保存并发布到',
+  gptCreatorConfirm: '确认',
+  gptCreatorPublishTypeOnlyMe: '仅限我',
+  gptCreatorPublishTypeWithLink: '拥有链接的所有人',
+  gptCreatorPublished: '已发布！',
+  gptCreatorPublishSucceeded: '成功发布 Copilot GPT',
+  gptCreatorPublishFailed: '发布 Copilot GPT 失败',
+  gptCreatorPublishLoading: '正在发布 Copilot GPT，请稍候...',
+  gptCreatorOnlyVisitToMe: '仅对我可见',
+  gptCreatorViewGpt: '查看 Copilot GPT',
+  gptCreatorSeeAll: '查看全部 Copilot GPT',
+  gptCreatorDialogTitle: '全部 Copilot GPT',
+  gptCreatorListTitle: '我的 Copilot GPT',
+  gptCreatorAddGptName: '创建新的 Copilot GPT',
+  gptCreatorAddGptDescription: '使用配置或创建工具创建可保留专用或共享的自定义 Copilot GPT',
+  gptCreatorDescriptionTitle: '说明',
+  gptCreatorPreviewButton: '预览 Copilot GPT',
+  gptCreatorDeleteButtonText: '删除',
+  gptCreatorEditButtonText: '编辑',
+  gptCreatorChatButtonText: '开始使用',
+  gptCreatorPreviewText: '在此处选择要预览的 Copilot GPT',
+  sydneyWindowsCopilotUseTerms: '使用条款',
   sydneyCarouselCollapse: '折叠',
   sydneyCarouselTitle: '最近的聊天主题',
   messageActionsCopy: '复制',
@@ -472,6 +668,7 @@ _w['_sydConvTranslation'] = {
   messageActionsCopied: '已复制',
   messageActionsCopyError: '错误',
   messageActionsReport: '报告',
+  messageActionsEditResponse: '编辑',
   tooltipPositive: '点赞',
   tooltipNegative: '不喜欢',
   tooltipShare: '共享',
@@ -480,13 +677,25 @@ _w['_sydConvTranslation'] = {
   codeDisclaimer: 'AI 生成的代码。仔细查看和使用。 {0}.',
   codeDisclaimerLinkLabel: '有关常见问题解答的详细信息',
   exportTitle: '导出',
-  exportTextTitle: '下载为文本(.txt)',
-  exportPdfTitle: '以 PDF (.pdf)格式下载',
-  exportWordTitle: '下载为文档(.docx)',
-  exportWordOnlineTitle: '在 Word 中编辑',
+  exportTextTitle: '文本',
+  exportPdfTitle: 'PDF',
+  exportPdfInOptionsTitle: '导出到 PDF',
+  exportWordTitle: 'Word',
+  exportWordInOptionsTitle: '导出到 Word',
+  exportWordOnlineTitle: 'Word',
   exportExcelTitle: '下载为工作簿(.xlsx)',
   exportExcelOnlineTitle: '在 Excel 中编辑',
   exportTableTitle: '表格',
+  exportOpenInWordLabel: '在 Word 中打开',
+  exportSaveToOneDrive: '保存到 OneDrive',
+  exportSaveToDevice: '保存到设备',
+  exportSaveAsWordTitle: 'Word',
+  exportSaveAsPdfTitle: 'PDF',
+  exportFilenameLabel: '名称',
+  exportEditFilenameLabel: '编辑',
+  exportFiletypeLabel: '类型',
+  exportCancel: '取消',
+  exportChooseFolder: '选择文件夹',
   exportToastViewButtonLabel: '查看',
   exportSuccessToastTitle: '已导出文件。某些格式和图像可能无法导出。',
   exportErrorToastTitle: '导出失败',
@@ -494,6 +703,14 @@ _w['_sydConvTranslation'] = {
   exportedFileUserTitle: '用户',
   exportedFileBotTitle: '必应',
   exportedFileSourceTitle: '源',
+  goldilocksMessageHeaderUserText: '你',
+  goldilocksMessageHeaderBotText: 'Copilot',
+  goldilocksMetaUsingText: '使用: ',
+  goldilocksMetaPluginText: '插件',
+  goldilocksMetaPluginsText: '插件',
+  goldilocksMetaSearchQueryText: '搜索',
+  goldilocksMetaSearchQueriesText: '搜索',
+  metaInternalSearchQueryGoldilocks: '正在搜索 {0}',
   mobileUpsellMessage1: '扫描此 QR 码以在移动必应应用上继续此对话',
   mobileUpsellTitle1: '在手机上继续',
   visualSearchMobileUpsellLabel: '在手机上使用必应应用',
@@ -504,28 +721,34 @@ _w['_sydConvTranslation'] = {
   actionBarKeyboardHint: '输入',
   feedbackShareAnswer: '查看此必应答案',
   feedbackShareGenerated: '查看我使用必应生成的内容',
-  feedbackShowTonesButtonAriaLabel: '显示所有音调',
+  feedbackLinkShareTitle: '下面是我使用 Microsoft Copilot (全球首个 AI支持的应答引擎)生成的答案。选择以查看完整答案或自行尝试。',
+  feedbackShowTonesButtonAriaLabel: '显示所有语气',
   feedbackHideTonesButtonAriaLabel: '隐藏所有色调',
   feedbackHidePreciseToneButtonAriaLabel: '隐藏精确',
   feedbackShareErrorToast: '共享失败。',
   serpfeedback: '反馈',
   shareConversation: '共享整个对话',
   speechAuthenticationError: '身份验证失败。请稍后重试。',
+  speechNoPermissionErrorWinCopilot: '\u003cb\u003e 麦克风访问 \u003c/b\u003e\u003cbr\u003e 要使 Windows 中的 Copilot 在 Windows 中使用您的麦克风，请确保在“Windows 设置”中启用\u003cb\u003e“允许桌面应用访问麦克风”\u003c/b\u003e。 ',
   speechOnlineNotification: '语音输入由 Microsoft 联机服务处理，不会进行收集或存储。',
   speechUnknownError: '出错了。',
   refresh: '刷新',
   feedbackShareContent: '下面是我使用新的必应（全球首个 AI支持的应答引擎）生成的答案。单击可查看完整答案，然后请你也来试一试。',
-  fileUploadDragAndDropLabel: '在此处删除图像或文件',
+  fileUploadDragAndDropLabel: '将图片或文件拖放到此处',
   fileUploadUnsupportedFileMessage: '此文件类型不受支持。选择文本文件，然后重试。',
   fileUploadMaxSizeLimitErrorMessage: '文件大小已超限。只能上传高达 500KB 的文件。',
+  fileUploadFileNameLengthErrorMessage: '文件名太长。',
   fileUploadMaxSizeLimitLongContextErrorMessage: '文件大小已超限。只能上传大小不超过 10MB 的文件。',
-  fileUploadMaxSizeLongContextErrorMessage: 'File size exceeded. You can only upload a file up to {0}MB.',
+  fileUploadMaxSizeLongContextErrorMessage: '文件大小已超限。只能上传大小不超过 {0}MB 的文件。',
   fileUploadTextFileUploadErrorMessage: '无法上传文件。',
   fileUploadWebPageInfoUploadErrorMessage: '无法从网页中提取内容。',
   fileUploadFlyoutInputboxAriaLabel: '粘贴网页 URL',
   fileUploadFlyoutTitle: '添加文本文件',
   fileUploadFlyoutUploadButtonLabel: '从此设备上传',
   fileUploadGenericErrorMessage: '无法上传该文件。请重试',
+  fileUploadWebUrlLimitErrorMessage: '仅允许上传一个 Web URL',
+  fileUploadFileLimitErrorMessage: '已超出最大文件上传限制',
+  fileUploadSameFileNameErrorMessage: '不允许使用相同名称上传文件',
   preview: '预览',
   toneSelectorDescription: '选择对话样式',
   toneSelectorMoreCreative: '更\\r\\n有创造力',
@@ -536,6 +759,7 @@ _w['_sydConvTranslation'] = {
   notificationClientIdChangedInNotebook: '你的笔记本已过期。',
   notificationClientIdChangedInNotebookCta: '开始新主题',
   notificationMaxTurnsPerDay: '很抱歉，你已达到可在 24 小时内发送到必应的邮件限制。请稍后回来查看!',
+  notificationMaxTurnsPerHour: '很抱歉，你已达到可在 1 小时内发送到必应的邮件限制。请稍后再试!',
   notificationMaxTurnsPerConversation: '很抱歉，此对话已达到其限制。使用“扫除”按钮清除此内容并进行更多聊天。',
   notificationMaxTurnsPerConversationInNotebook: '很抱歉，我想我们需要继续操作!使用左侧的“新主题”按钮清除内容并重新开始。',
   notificationMaxTurnsForMuidUsers: '你已达到今天的对话限制。',
@@ -552,12 +776,12 @@ _w['_sydConvTranslation'] = {
   welcomeMobSugg1: '必应如何使用 AI?',
   welcomeMobSugg2: '必应还可以做什么？',
   welcomeMobSugg3: '科技领域的最新消息是什么？',
-  of: '共',
+  of: '的',
   notificationResetConversation: '很抱歉，似乎出现错误。',
   notificationResetConversationCta: '让我们重新开始吧。',
-  toneSelectorCreativeTooltip: '清除对话并开始原创和富有想象力的聊天',
-  toneSelectorBalancedTooltip: '清除对话并开始一个信息丰富且友好的聊天',
-  toneSelectorPreciseTooltip: '清除对话并开始简洁直截了当的聊天',
+  toneSelectorCreativeTooltip: '开始原创和富有想象力的聊天',
+  toneSelectorBalancedTooltip: '推荐用于收到通知的日常聊天',
+  toneSelectorPreciseTooltip: '开始简短聊天，这有助于事实调查',
   toneSelectorSuppressedTooltip: '暂时不可用。请稍后再试!',
   notificationDisengaged: '也许该换个新话题了。',
   notificationForbidden: '很抱歉，你似乎不再有权访问此功能。请几天后再次查看。',
@@ -566,7 +790,7 @@ _w['_sydConvTranslation'] = {
   notificationUnauthorizedCta: '请重新登录。',
   notificationUnauthorizedMissingDOB: '可能需要确认你的出生日期才能继续聊天。',
   notificationUnauthorizedMissingDOBCta: '在此处更新你的帐户。',
-  notificationUnauthorizedChildUser: '很抱歉，必应聊天不适用于此帐户。',
+  notificationUnauthorizedChildUser: '很抱歉，Bing Chat 不适用于此帐户。',
   notificationUnauthorizedChildUserCta: '在 bing.com 上浏览 Web!',
   notificationMessageError: '上一条消息似乎已中断。',
   notificationMessageErrorInNotebook: '你上次的提示似乎已中断。',
@@ -575,12 +799,28 @@ _w['_sydConvTranslation'] = {
   notificationAutoRefreshConversation: '出错了。正在解决，请稍候。',
   notificationAutoResendOnConnectionError: '你的连接暂时丢失。正在重新连接，请稍候。',
   notificationAutoRecoverOnMessageError: '很抱歉，你最后一封邮件似乎已中断。正在解决，请稍候。',
-  notificationAutoRecoverOnMessageErrorInNotebook: '很抱歉，你最后一封邮件似乎已中断。正在解决，请稍候。',
+  notificationAutoRecoverOnMessageErrorInNotebook: '抱歉，您的上一个请求被中断了。我们正在解决，请稍等。',
   notificationContinueRecovering: '我仍在解决问题，请稍候。',
   signInCta: '登录 ',
   signInDescription: ' 以提出更多问题并进行更长的对话',
   signInDescriptionInPrivate: '打开非 inPrivate 窗口，以便进行更长的对话或提出更多问题',
   copyCodeButtonTooltip: '复制',
+  autosaveConsentTitle: '启用自动保存以重新访问聊天',
+  autosaveConsentBody: '你的聊天当前未自动保存。若要跨设备访问以前的对话，请使用自动保存。',
+  autosaveConsentNote: '请注意，此设置将清除当前对话。',
+  autosaveConsentAccept: '启用自动保存',
+  autosaveConsentDeny: '否',
+  autosaveOffBanner: '自动保存当前已关闭',
+  personalConsentTitle: '启用个性化以获得更好的答案',
+  personalConsentBody: '允许必应使用最近必应聊天对话中的见解来提供个性化的响应。',
+  personalConsentAccept: '打开',
+  personalConsentDeny: '否',
+  personalOffBanner: '个性化当前处于关闭状态',
+  personalOnBanner: '个性化当前处于启用状态',
+  personalOnUndoBanner: '个性化设置已打开',
+  personalOffUndoBanner: '个性化设置已关闭',
+  personalConsentUndo: '撤消',
+  personalConsentTurnOff: '禁用',
   threadsSharedOnDate: '于 {0} 共享',
   threadsMore: '更多',
   threadsExportPanelTitle: '选择格式',
@@ -621,6 +861,8 @@ _w['_sydConvTranslation'] = {
   injectedActionCardDeny: '忽略',
   webPageContextPrefix: '已访问网站',
   useGPT4SwitchLabel: '使用 GPT-4',
+  switchGPT4Label: 'GPT-4',
+  switchGPT4TurboLabel: 'GPT-4 Turbo',
   zeroInputSuggestionFallback1: '哪款咖啡研磨机评价最好？',
   zeroInputSuggestionFallback2: '对于一个预算有限的六口之家来说，会首选哪三款车型？',
   zeroInputSuggestionFallback3: '写一个我的同事会觉得有趣的笑话',
@@ -637,25 +879,25 @@ _w['_sydConvTranslation'] = {
   zeroInputSuggestionCategory7: '创建',
   zeroInputDescription: '必应是 AI 支持的网上助手',
   discoverMessageItemTitle: '📝 一起重写文本',
+  welcomeContainerFaq: '常见问题解答',
   discoverMessageItemContent: '尝试从页面中选择文本以查看我们可以一起执行的操作',
   pluginTitle: '插件',
   bookNowWithOpenTable: '立即使用 OpenTable 预订',
   scrollLeft: '向左滚动',
   scrollRight: '向右滚动',
-  responses: 'responses',
+  responses: '回复',
   personalizationConsentTitleText: '已为你设置个性化对话',
-  personalizationConsentTitleTextEu: '已为你设置个性化对话',
+  personalizationConsentTitleTextEuOn: '个性化设置已启用',
+  personalizationConsentTitleTextEuOff: '个性化设置已关闭',
   personalizationConsentContentText1: '必应使用聊天历史记录中的 Insights 使对话成为独一无二的对话。',
   personalizationConsentContentText1Eu: '共享聊天历史记录时，必应会根据你和你的兴趣定制回复。',
   personalizationConsentContentText2: '。',
+  personalizationConsentContentSettingsText: '随时在“必应设置”中关闭个性化设置。',
   personalizationConsentLearnMoreText: '在我们的常见问题解答中了解详细信息',
-  personalizationConsentLearnMoreTextEu: '了解有关个性化的详细信息',
-  personalizationConsentContentSettingsText: '随时在必应设置中关闭个性化设置。 ',
-  personalizationConsentStatusPositiveText: '已启用个性化。',
-  personalizationConsentStatusNegativeText: '未启用个性化。',
-  personalizationConsentSettingsText1: '若要修改，请访问',
-  personalizationConsentSettingsLinkText: '必应聊天设置',
-  personalizationConsentSettingsText2: '页面',
+  personalizationConsentLearnMoreTextEu: '了解有关个性化答案的详细信息',
+  personalizationConsentSetEuText1: '若要修改，请访问',
+  personalizationConsentSetEuLinkText: 'Bing Chat 设置',
+  personalizationConsentSetEuText2: '页面',
   personalizationConsentTurnOnText: '打开',
   personalizationConsentTurnOffText: '不打开',
   pluginEnabledPlugin: '已启用',
@@ -669,9 +911,9 @@ _w['_sydConvTranslation'] = {
   pluginTerms: '使用条款',
   pluginPrivacy: '隐私策略',
   pluginPanelFreTitle: '插件现在可用',
-  pluginPanelFreTextLabel: '新建:',
+  pluginPanelFreTextLabel: '新:',
   pluginPanelFreText: '打开插件，帮助你从喜欢的品牌中查找餐厅预订、航班等。',
-  pluginPanelFreDismiss: '忽略',
+  pluginPanelFreDismiss: '关闭插件通知',
   pluginPanelAlertTitle: '插件在“平衡”模式下不可用',
   pluginPanelAlertCta: '重置对话 ',
   pluginPanelAlertSubtitle: '并使用“更多创意”或“更精确”对话样式，然后重试。',
@@ -681,9 +923,11 @@ _w['_sydConvTranslation'] = {
   pluginLimitationMaxV2: '为对话最多选择 {0} 个插件。',
   pluginLimitationLock: '在选择“新建主题”进行更改之前，插件会锁定到对话中。',
   pluginLimitationLockV2: '若要在开始对话后更改插件，请选择 {0}。',
-  pluginPanelNolimit: '禁用 {0} 不会影响插件限制',
+  pluginPanelNolimit: '禁用 {0} 将禁用所有已启用的插件',
+  pluginRevocationReason: '由于违反 Microsoft 策略，此插件被暂时禁用',
+  pluginSearchBoxPlaceholder: '搜索聊天插件...',
   activatetoUsePlugins: '激活 {0} 以使用插件',
-  threadsToggleExpansion: '切换扩展',
+  threadsToggleExpansion: '已启用线程的插件扩展切换',
   threadsEnabledPlugins: '已启用插件:',
   bingSearchDisabled: '搜索**已禁用**。',
   bingSearchDisabledforMessage: '搜索已禁用',
@@ -696,6 +940,7 @@ _w['_sydConvTranslation'] = {
   visualSearchFlyoutTakePhotoButtonLabel: '拍照',
   visualSearchDragAndDropLabel: '将图片拖至此处',
   visualSearchFlyoutUploadButtonLabel: '从此设备上传',
+  visualSearchMaxCameraButtonLabel: 'Full screen camera view',
   raiDisclaimerLabel: 'AI 生成的内容可能不正确',
   slimHeaderTitle: '查看 AI 支持的新必应的解答',
   starterPageTitle: '必应是 AI 支持的网上助手',
@@ -751,7 +996,43 @@ _w['_sydConvTranslation'] = {
   basedOnLocation: '基于: {0}、{1}',
   basedOnYourLocation: '基于你的位置',
   locationFetchErrorMessage: '权限被拒',
-  locationLearnMore: '(了解详细信息)'
+  locationLearnMore: '(了解详细信息)',
+  deleteAllAria: '删除全部聊天历史记录',
+  deleteAll: '删除全部聊天历史记录',
+  deleteAllMobile: '全部删除',
+  moreActions: '更多操作',
+  newTopic: '新主题',
+  chatHistory: '聊天记录',
+  messageLearnMoreV2: '了解详细信息',
+  menu: '菜单',
+  sunoPolicyText: '你的歌曲请求，包括其中的任何个人数据，将与 Suno 共享。使用流派和风格来描述你的请求，而不是使用特定艺术家姓名。每天最多可创建 5 首歌曲。',
+  sunoNonSignedInGreetings1: ' 使用 Suno 创建自己的歌曲。这将启用 Suno 插件和 ',
+  sunoNonSignedInGreetings2: ' 和 ',
+  sunoNonSignedInGreetings3: ' 将适用。',
+  sunoNonSignedInGreetingsSignIn: '登录到 Copilot',
+  sunoCachedMessage: '为我父亲写一首宝莱坞风格的乡村歌曲，他即将从教师岗位退休。',
+  customGptWelcomeTilesQuestionDescription: '我可以询问哪种类型的问题?',
+  customGptWelcomeTilesListDescription: '告诉我 5 件关于你的事',
+  customGptWelcomeTilesSummarizeDescription: '给我讲讲你是什么样的 GPT',
+  sydneyCopilotProGetCopilotPro: '获取 Copilot Pro',
+  sydneyCopilotProSuperchargeAIExperience: '增强 AI 体验'
+};
+var sj_appHTML = function(n, t) {
+  var u, f, e, r, i, s, h;
+  if (t && n) {
+    var c = "innerHTML",
+    l = "script",
+    a = "appendChild",
+    v = "length",
+    y = "src",
+    p = sj_ce,
+    o = p("div");
+    if (o[c] = "<br>" + t, u = o.childNodes, o.removeChild(u[0]), f = o.getElementsByTagName(l), f) for (e = 0; e < f[v]; e++) r = p(l),
+    i = f[e],
+    i && (r.type = i.type == "module" || i.type == "importmap" ? i.type: "text/javascript", s = i.getAttribute(y), s ? (r.setAttribute(y, s), r.setAttribute("crossorigin", "anonymous")) : (r.text = i[c], r.setAttribute("data-bing-script", "1")), i.parentNode.replaceChild(r, i));
+    for (h = _d.createDocumentFragment(); u[v];) h[a](u[0]);
+    n[a](h)
+  }
 };
 function parseQueryParamsFromQuery (n, t) {
   var u, f, e, o;
@@ -848,6 +1129,258 @@ sj_be(
   },
   1
 );
+function ge_cl(n, t) {
+  var u, f, r, i;
+  if (n) {
+    if (n.getElementsByClassName) return n.getElementsByClassName(t);
+    for (u = n.getElementsByTagName("*"), f = [], r = 0; r < u.length; r++) i = u[r],
+    i && i.className && i.className.indexOf(t) !== -1 && f.push(i);
+    return f
+  }
+  return []
+};
+var SydneyCameraProviderFactory; (function(n) {
+  n.registeredCameraProvidersMap = {
+    FileUploadCameraProvider: 'FileUploadCameraProvider',
+    SydneyMobileWebCameraProvider: 'SydneyMobileWebCameraProvider',
+    SydneyNativeCameraProvider: 'SydneyNativeCameraProvider',
+    SydneyEdgeNativeCameraProvider: 'SydneyEdgeNativeCameraProvider'
+  };
+  n.create = function(t) {
+    n.registeredCameraProvidersMap[t] && _w[t] && _w[t].create()
+  }
+})(SydneyCameraProviderFactory || (SydneyCameraProviderFactory = {}));
+var SydneyCameraProviderBase; (function(n) {
+  var i, t; (function(n) {
+    n.Pending = 'pending';
+    n.Granted = 'granted';
+    n.Denied = 'denied'
+  })(i = n.CameraPermissionStatus || (n.CameraPermissionStatus = {}));
+  t = function() {
+    function n() {}
+    return n.prototype.registerResultCallback = function(n) {
+      this.onResultCallback = n
+    },
+    n
+  } ();
+  n.CameraProviderBase = t
+})(SydneyCameraProviderBase || (SydneyCameraProviderBase = {}));
+var __extends = this && this.__extends ||
+function() {
+  var n = function(t, i) {
+    return n = Object.setPrototypeOf || {
+      __proto__: []
+    }
+    instanceof Array &&
+    function(n, t) {
+      n.__proto__ = t
+    } ||
+    function(n, t) {
+      for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (n[i] = t[i])
+    },
+    n(t, i)
+  };
+  return function(t, i) {
+    function r() {
+      this.constructor = t
+    }
+    if (typeof i != 'function' && i !== null) throw new TypeError('Class extends value ' + String(i) + ' is not a constructor or null');
+    n(t, i);
+    t.prototype = i === null ? Object.create(i) : (r.prototype = i.prototype, new r)
+  }
+} (),
+__awaiter = this && this.__awaiter ||
+function(n, t, i, r) {
+  function u(n) {
+    return n instanceof i ? n: new i(function(t) {
+      t(n)
+    })
+  }
+  return new(i || (i = Promise))(function(i, f) {
+    function o(n) {
+      try {
+        e(r.next(n))
+      } catch(t) {
+        f(t)
+      }
+    }
+    function s(n) {
+      try {
+        e(r['throw'](n))
+      } catch(t) {
+        f(t)
+      }
+    }
+    function e(n) {
+      n.done ? i(n.value) : u(n.value).then(o, s)
+    }
+    e((r = r.apply(n, t || [])).next())
+  })
+},
+__generator = this && this.__generator ||
+function(n, t) {
+  function o(n) {
+    return function(t) {
+      return s([n, t])
+    }
+  }
+  function s(o) {
+    if (e) throw new TypeError('Generator is already executing.');
+    while (f && (f = 0, o[0] && (r = 0)), r) try {
+      if (e = 1, u && (i = o[0] & 2 ? u['return'] : o[0] ? u['throw'] || ((i = u['return']) && i.call(u), 0) : u.next) && !(i = i.call(u, o[1])).done) return i; (u = 0, i) && (o = [o[0] & 2, i.value]);
+      switch (o[0]) {
+      case 0:
+      case 1:
+        i = o;
+        break;
+      case 4:
+        return r.label++,
+        {
+          value: o[1],
+          done: !1
+        };
+      case 5:
+        r.label++;
+        u = o[1];
+        o = [0];
+        continue;
+      case 7:
+        o = r.ops.pop();
+        r.trys.pop();
+        continue;
+      default:
+        if (! (i = r.trys, i = i.length > 0 && i[i.length - 1]) && (o[0] === 6 || o[0] === 2)) {
+          r = 0;
+          continue
+        }
+        if (o[0] === 3 && (!i || o[1] > i[0] && o[1] < i[3])) {
+          r.label = o[1];
+          break
+        }
+        if (o[0] === 6 && r.label < i[1]) {
+          r.label = i[1];
+          i = o;
+          break
+        }
+        if (i && r.label < i[2]) {
+          r.label = i[2];
+          r.ops.push(o);
+          break
+        }
+        i[2] && r.ops.pop();
+        r.trys.pop();
+        continue
+      }
+      o = t.call(n, r)
+    } catch(s) {
+      o = [6, s];
+      u = 0
+    } finally {
+      e = i = 0
+    }
+    if (o[0] & 5) throw o[1];
+    return {
+      value: o[0] ? o[1] : void 0,
+      done: !0
+    }
+  }
+  var r = {
+    label: 0,
+    sent: function() {
+      if (i[0] & 1) throw i[1];
+      return i[1]
+    },
+    trys: [],
+    ops: []
+  },
+  e,
+  u,
+  i,
+  f;
+  return f = {
+    next: o(0),
+    'throw': o(1),
+    'return': o(2)
+  },
+  typeof Symbol == 'function' && (f[Symbol.iterator] = function() {
+    return this
+  }),
+  f
+},
+FileUploadCameraProvider; (function(n) {
+  function t() {
+    return __awaiter(this, void 0, void 0,
+    function() {
+      return __generator(this,
+      function() {
+        return [2, SydneyCameraProviderBase.CameraPermissionStatus.Granted]
+      })
+    })
+  }
+  function r() {
+    var n = {
+      initializeCamera: i.initialize,
+      permissionProvider: t
+    };
+    CIB.config.visualSearch.nativeCameraProvider = n;
+    CIB.config.features.enableNativeCameraInput = !0
+  }
+  var i = function(n) {
+    function t() {
+      var t = n.call(this) || this,
+      i;
+      return t.inputElement = null,
+      t.handleFileUpload = function(n) {
+        var r, u, i = n.target,
+        f = (r = i === null || i === void 0 ? void 0 : i.files) === null || r === void 0 ? void 0 : r[0],
+        e;
+        if (f && ((u = f.type) === null || u === void 0 ? void 0 : u.includes('image'))) {
+          try {
+            e = new FileReader;
+            e.onload = t.handleUploadResult;
+            e.readAsDataURL(f)
+          } catch(n) {}
+          i.value = ''
+        }
+      },
+      t.handleUploadResult = function(n) {
+        var i, u = (i = n === null || n === void 0 ? void 0 : n.target) === null || i === void 0 ? void 0 : i.result,
+        r;
+        if (t.onResultCallback) {
+          r = {
+            success: !1,
+            result: null
+          };
+          typeof u == 'string' && (r = {
+            success: !0,
+            result: u
+          });
+          t.onResultCallback(r)
+        }
+      },
+      i = _d.createElement('input'),
+      i.type = 'file',
+      i.accept = 'image/gif, image/jpeg, image/png, image/webp',
+      i.style.display = 'none',
+      _d.body.appendChild(i),
+      t.inputElement = i,
+      t.inputElement.onchange = t.handleFileUpload,
+      t
+    }
+    return __extends(t, n),
+    t.initialize = function() {
+      return new t
+    },
+    t.prototype.unSubscribe = function() {
+      var n; (n = this.inputElement) === null || n === void 0 ? void 0 : n.remove()
+    },
+    t.prototype.requestCameraUpload = function() {
+      var n; (n = this.inputElement) === null || n === void 0 ? void 0 : n.click()
+    },
+    t
+  } (SydneyCameraProviderBase.CameraProviderBase);
+  n.create = r
+})(FileUploadCameraProvider || (FileUploadCameraProvider = {}));
 
 // 设置未登录用户的 codexMUIDUser 为 true
 const User_UCookieValue = CookieGet('_U')
@@ -864,6 +1397,31 @@ if (customChatNum != 0) {
   }
 }
 
+const uiVersion = UserStoreGet('uiVersion')
+if (uiVersion == 'v1') {
+  _w['_sydConvConfig']['disableWelcomeScreen'] = false
+  _w['_sydConvConfig']['enableWelcomeScreenV2'] = false
+  _w['_sydConvConfig']['enableWelcomeScreenV3'] = false
+  _w['_sydConvConfig']['enableGoldilocks'] = false
+  _w['_sydConvConfig']['enableGoldilocksUserMsgActionBar'] = false
+  _w['_sydConvConfig']['enableFreeSydney'] = false
+  _w['_sydConvConfig']['enableDesignerGPT'] = false
+} else if (uiVersion == 'v3') {
+  _w['_sydConvConfig']['disableWelcomeScreen'] = true
+  _w['_sydConvConfig']['enableWelcomeScreenV2'] = false
+  _w['_sydConvConfig']['enableWelcomeScreenV3'] = true
+  _w['_sydConvConfig']['enableGoldilocks'] = true
+  _w['_sydConvConfig']['enableFreeSydney'] = false
+  _w['_sydConvConfig']['enableDesignerGPT'] = false
+} else {
+  _w['_sydConvConfig']['disableWelcomeScreen'] = true
+  _w['_sydConvConfig']['enableWelcomeScreenV2'] = true
+  _w['_sydConvConfig']['enableWelcomeScreenV3'] = false
+  _w['_sydConvConfig']['enableGoldilocks'] = false
+  _w['_sydConvConfig']['enableGoldilocksUserMsgActionBar'] = false
+  _w['_sydConvConfig']['enableFreeSydney'] = true
+  _w['_sydConvConfig']['enableDesignerGPT'] = true
+}
 
 if (UserStoreGet('enterpriseEnable')) {
   _w['_sydConvConfig']['disableWelcomeScreen'] = false
