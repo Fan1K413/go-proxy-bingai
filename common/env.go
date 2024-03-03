@@ -9,7 +9,8 @@ import (
 )
 
 var (
-	PORT string
+	LOCAL_MODE bool
+	PORT       string
 	// is debug
 	IS_DEBUG_MODE bool
 	// user token
@@ -36,7 +37,9 @@ var (
 
 	AUTHOR = "Harry-zklcdc/go-proxy-bingai"
 
-	INFO string
+	ANNOUNCEMENT string
+
+	LOG_LEVEL = "INFO"
 )
 
 func init() {
@@ -49,6 +52,7 @@ func initEnv() {
 	if PORT == "" {
 		PORT = "8080"
 	}
+	LOCAL_MODE = os.Getenv("LOCAL_MODE") != ""
 	// is debug
 	IS_DEBUG_MODE = os.Getenv("Go_Proxy_BingAI_Debug") != ""
 	// auth
@@ -75,7 +79,13 @@ func initEnv() {
 		BING_SYDNEY_URL, _ = url.Parse(BING_SYDNEY_DOMAIN)
 	}
 
-	INFO = os.Getenv("Go_Proxy_BingAI_INFO")
+	ANNOUNCEMENT = os.Getenv("Go_Proxy_BingAI_INFO")
+
+	LOG_LEVEL = strings.ToUpper(os.Getenv("LOG_LEVEL"))
+	if LOG_LEVEL == "" || !IsInArray(LevelArry[:], LOG_LEVEL) {
+		LOG_LEVEL = "INFO"
+	}
+	Logger = NewLogger(LOG_LEVEL)
 }
 
 func initUserToken() {

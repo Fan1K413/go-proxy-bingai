@@ -4,7 +4,6 @@ import (
 	"adams549659584/go-proxy-bingai/common"
 	"encoding/json"
 	"io"
-	"math/rand"
 	"net/http"
 	"strings"
 	"time"
@@ -54,14 +53,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 
 	cookie := r.Header.Get("Cookie")
 	if cookie == "" || !strings.Contains(cookie, "_U=") {
-		if len(common.USER_TOKEN_LIST) > 0 {
-			seed := time.Now().UnixNano()
-			rng := rand.New(rand.NewSource(seed))
-			cookie = common.USER_TOKEN_LIST[rng.Intn(len(common.USER_TOKEN_LIST))]
-			chat.SetCookies(cookie)
-		} else {
-			cookie = chat.GetCookies()
-		}
+		cookie = chat.GetCookies()
 	}
 	chat.SetCookies(cookie)
 
@@ -69,6 +61,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte(err.Error()))
+		common.Logger.Error("ReadAll Error: %v", err)
 		return
 	}
 
@@ -128,6 +121,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte(err.Error()))
+		common.Logger.Error("NewConversation Error: %v", err)
 		return
 	}
 
@@ -173,6 +167,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 				if err != nil {
 					w.WriteHeader(http.StatusInternalServerError)
 					w.Write([]byte(err.Error()))
+					common.Logger.Error("Marshal Error: %v", err)
 					return
 				}
 				w.Write([]byte("data: "))
@@ -185,6 +180,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				w.WriteHeader(http.StatusInternalServerError)
 				w.Write([]byte(err.Error()))
+				common.Logger.Error("Marshal Error: %v", err)
 				return
 			}
 			w.Write([]byte("data: "))
@@ -208,6 +204,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte(err.Error()))
+			common.Logger.Error("Chat Error: %v", err)
 			return
 		}
 
@@ -224,6 +221,7 @@ func ChatHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte(err.Error()))
+			common.Logger.Error("Marshal Error: %v", err)
 			return
 		}
 		w.WriteHeader(http.StatusOK)
